@@ -6,83 +6,131 @@
 
 .c- {
   &tile {
-    display: grid;
-    gap: 56px;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(2, 400px);
-    &__item {
-      width: 400px;
-      height: 200px;
-      background-color: $white02;
-      border-radius: 10px;
-      border: 2px solid $primary;
-      padding: 16px 32px;
+    &01 {
       display: grid;
-      grid-auto-flow: column;
+      gap: 56px;
       align-items: center;
-      justify-content: start;
-      grid-template-columns: auto 1fr;
-      gap: 0 32px;
-      &-icon {
-        text-align: center;
-        margin: 0 auto 8px;
-        height: 54px;
-        span {
-          font-size: 65px;
-          color: $primary;
-        }
-      }
-      &-title {
-        font-size: 18px;
-        color: $text01;
-        letter-spacing: .03em;
-        font-weight: 500;
-      }
-      &-list {
+      justify-content: center;
+      grid-template-columns: repeat(2, 400px);
+      &__item {
+        width: 400px;
+        height: 200px;
+        background-color: $white02;
+        border-radius: 10px;
+        border: 2px solid $primary;
+        padding: 16px 32px;
         display: grid;
-        grid-auto-flow: row;
-        gap: 24px 0;
-      }
-      &-link {
-        color: $text02;
-        width: 100%;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: .03em;
-        line-height: 1.1;
-        transition: .3s;
-        display: flex;
+        grid-auto-flow: column;
         align-items: center;
-        justify-content: space-between;
-        &:hover {
-          color: $primary;
+        justify-content: start;
+        grid-template-columns: auto 1fr;
+        gap: 0 32px;
+        &-icon {
+          text-align: center;
+          margin: 0 auto 8px;
+          height: 54px;
+          span {
+            font-size: 65px;
+            color: $primary;
+          }
+        }
+        &-title {
+          font-size: 18px;
+          color: $text01;
+          letter-spacing: .03em;
           font-weight: 500;
         }
-        span {
-          font-size: 18px;
-          color: $primary;
+        &-list {
+          display: grid;
+          grid-auto-flow: row;
+          gap: 24px 0;
+        }
+        &-link {
+          color: $text02;
+          width: 100%;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: .03em;
+          line-height: 1.1;
+          transition: .3s;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &:hover {
+            color: $primary;
+            font-weight: 500;
+          }
+          span {
+            font-size: 18px;
+            color: $primary;
+          }
+        }
+        &--disabled {
+          @extend .c-tile01__item;
+          background-color: $bg-light;
+          border: none;
+          .c-tile01__item {
+            &-icon {
+              span {
+                color: $border02;
+              }
+            }
+            &-title, &-link {
+              color: $text02;
+              span {
+                color: $text02;
+              }
+            }
+            &-link {
+              pointer-events: none;
+            }
+          }
         }
       }
-      &--disabled {
-        @extend .c-tile__item;
-        background-color: $bg-light;
-        border: none;
-        .c-tile__item {
-          &-icon {
-            span {
-              color: $border02;
-            }
+    }
+
+    &02 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      width: 650px;
+      margin: 0 auto;
+      &__item {
+        background-color: #fff;
+        border: 2px solid $primary;
+        border-radius: 10px;
+        width: 190px;
+        height: 190px;
+        transition: .3s;
+        &:hover {
+          background-color: rgba(#5CA1CD, .1);
+        }
+        &-link {
+          padding: 24px 0 0 0;
+          display: block;
+          text-align: center;
+          height: 100%;
+          width: 100%;
+        }
+        &-icon {
+          width: 100%;
+          span {
+            font-size: 54px;
+            color: $primary;
           }
-          &-title, &-link {
-            color: $text02;
-            span {
-              color: $text02;
-            }
-          }
-          &-link {
-            pointer-events: none;
-          }
+        }
+        &-title {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: .03em;
+          margin: 16px auto 0;
+          color: $text01;
+        }
+        &-description {
+          font-size: 13px;
+          color: #6F6F6F;
+          margin: 4px auto 0;
+          line-height: 1.5;
         }
       }
     }
