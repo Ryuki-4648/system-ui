@@ -1,0 +1,39 @@
+@use "../global/variables" as *;
+
+/*
+  リンク
+------------------------------------- */
+
+.c- {
+  &link {
+    display: flex;
+    align-items: center;
+    color: $text01;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .3s;
+    &:hover {
+      color: $border01;
+    }
+    span {
+      color: $primary;
+    }
+
+    // 別ページに進む場合に使用
+    &01 {
+      @extend .c-link;
+      text-align: right;
+      justify-content: end;
+      display: inline;
+      span {
+        vertical-align: bottom;
+      }
+    }
+
+    // メインメニューに戻る場合に使用
+    &02 {
+      @extend .c-link;
+      justify-content: start;
+    }
+  }
+}

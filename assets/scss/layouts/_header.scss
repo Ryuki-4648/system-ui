@@ -1,0 +1,25 @@
+@use "../global/variables" as *;
+
+/*
+  ヘッダー
+------------------------------------- */
+
+.l- {
+  &header {
+    background-color: #fff;
+    padding: 16px 40px;
+    font-size: 24px;
+    letter-spacing: .03em;
+    font-weight: 500;
+    width: 100%;
+    border-bottom: 1px solid #DDDDDD;
+    line-height: 1;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    &__sub {
+      font-size: 18px;
+      margin: 0 0 0 48px;
+    }
+  }
+}

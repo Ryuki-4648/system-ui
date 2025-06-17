@@ -1,0 +1,55 @@
+@use "../global/variables" as *;
+
+/*
+  モーダル
+------------------------------------- */
+
+.c- {
+  &modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 620px;
+    min-height: 180px;
+    background-color: #fff;
+    padding: 56px 40px 40px;
+    border-radius: 8px;
+    z-index: 11;
+    &__close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      border: none;
+      transition: .3s;
+      color: $text01;
+      &:hover {
+        color: $primary;
+      }
+    }
+    &__text {
+      font-size: 16px;
+      margin: 0 auto 8px;
+    }
+    &__list {
+      font-size: 16px;
+      display: flex;
+      line-height: 1.5;
+      &:last-of-type {
+        margin: 0 auto 40px;
+      }
+      &-term {
+        font-weight: 500;
+      }
+    }
+    &__button {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 0 40px;
+      justify-content: center;
+    }
+  }
+}

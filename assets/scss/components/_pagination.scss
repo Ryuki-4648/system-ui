@@ -1,0 +1,48 @@
+@use "../global/variables" as *;
+
+/*
+  ページネーション
+------------------------------------- */
+
+.c- {
+  &pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 24px auto 0;
+    &__item {
+      &:first-child {
+
+      }
+      &.is-current {
+        .c-pagination__link {
+          background-color: $primary;
+          color: $white01;
+        }
+      }
+    }
+    &__link {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $text02;
+      transition: .3s;
+      &--number {
+        @extend .c-pagination__link;
+        &:hover {
+          background-color: rgba($secondary, .1);
+        }
+      }
+      &--arrow {
+        @extend .c-pagination__link;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

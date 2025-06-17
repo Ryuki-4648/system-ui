@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デバイス削除 | デバイス管理 |SYSTEM-UI</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  
+  <!-- Google material icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <div class="l-container">
+
+    <div class="l-sidenavi">
+      <button class="l-sidenavi__button">
+        <span class="material-symbols-outlined">keyboard_double_arrow_left</span>
+        <!-- メニューを閉じているときのアイコンは <span class="material-symbols-outlined">keyboard_double_arrow_right</span> -->
+      </button>
+      <h1 class="l-sidenavi__company">SYSTEM-UI</h1>
+      <div class="l-sidenavi__menu">
+        <ul class="l-sidenavi__menu-list">
+          <li class="l-sidenavi__menu-item is-current">
+            <a href="/index.html" class="l-sidenavi__menu-link">
+              <span class="material-symbols-outlined">grid_view</span>メインメニュー</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/smart-meter.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">speed</span>機器</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/kenshin.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">list_alt</span>一覧</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/alarm.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">notifications</span>お知らせ</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">tenancy</span>API連携</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/user.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">face</span>ユーザー管理</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/swan.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">sync_alt</span>連携</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/statistical-data.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">equalizer</span>統計データ</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <p class="l-sidenavi__menu-text"><span class="material-symbols-outlined">devices</span>デバイス管理</p>
+            <ul class="l-sidenavi__menu-sub">
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/create.html" class="l-sidenavi__menu-sub-link">デバイス登録</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/delete.html" class="l-sidenavi__menu-sub-link">デバイス削除</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/link.html" class="l-sidenavi__menu-sub-link">デバイス紐付け</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/exchange.html" class="l-sidenavi__menu-sub-link">デバイス交換</a>
+              </li>
+            </ul>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/setting.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">settings</span>設定</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/logout.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">logout</span>ログアウト</a>
+          </li>
+        </ul>
+      </div>
+      <div class="l-sidenavi__user-info">
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">ユーザー名</dt>
+          <dd class="l-sidenavi__user-info-description">admin-user001</dd>
+        </dl>
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">利用権限</dt>
+          <dd class="l-sidenavi__user-info-description">管理者</dd>
+        </dl>
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">事業者</dt>
+          <dd class="l-sidenavi__user-info-description">SYSTEM-UI<span>様</span></dd>
+        </dl>
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">ログイン日時</dt>
+          <dd class="l-sidenavi__user-info-description">YYYY/MM/DD HH:SS</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="l-main">
+      <header class="l-header">デバイス管理<span class="l-header__sub">デバイス登録</span></header>
+
+      <div class="l-main__content">
+
+        <section class="l-main__content-form">
+          <p class="l-main__content-text">キャリア、通信機器メーカー、エリアを選択後、ファイルを選択し、「削除」をクリックしてください。</p>
+          <form action="">    
+            <div class="l-main__content-search">
+              <div class="l-main__content-search-form">
+                <div class="c-form__wrap">
+                  <div class="c-form">
+                    <label for="" class="c-form__label">キャリア</label>
+                    <input type="radio" class="c-form__radio" id="carrier1" name="carrier">
+                    <label for="carrier1" class="c-form__radio-label">KEYAKI SYSTEM</label>
+                    <input type="radio" class="c-form__radio" id="carrier2" name="carrier">
+                    <label for="carrier2" class="c-form__radio-label">NOGI-DX</label>
+                    <input type="radio" class="c-form__radio" id="carrier3" name="carrier">
+                    <label for="carrier3" class="c-form__radio-label">Hinata-AI</label>
+                  </div>
+                  <div class="c-form">
+                    <label for="" class="c-form__label">通信機器メーカー</label>
+                    <select name="example" class="c-form__select">
+                      <option value="サンプル1" class="c-form__select-option">サンプル1</option>
+                      <option value="サンプル2" class="c-form__select-option">サンプル2</option>
+                      <option value="サンプル3" class="c-form__select-option">サンプル3</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /.c-form__wrap -->
+              </div>
+            </div>
+    
+            <div class="l-main__content-search">
+              <div class="l-main__content-search-form">
+                <div class="c-form__wrap">
+                  <div class="c-form">
+                    <label class="c-form__label">エリア</label>
+                    <input type="radio" class="c-form__radio" id="area1" name="area">
+                    <label for="area1" class="c-form__radio-label">区部</label>
+                    <input type="radio" class="c-form__radio" id="area2" name="area">
+                    <label for="area2" class="c-form__radio-label">多摩</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="l-main__content-search">
+              <label for="" class="c-form__label">ファイルをアップロード</label>
+              <p class="c-form__notice01">ファイルは10件まで選択できます。</p>
+              <div class="c-form__upload--delete" id="uploadArea">
+                <input type="file" id="fileInput" class="c-form__upload-input" multiple accept=".png" />
+                <p class="c-form__upload-text">ファイルを選択または<br>ドラッグ＆ドロップしてください</p>
+                <span class="material-symbols-outlined">upload_file</span>
+              </div>
+            </div>
+    
+            <div class="c-button">
+              <button class="c-button__danger" disabled>削除</button>
+            </div>
+
+          </form>
+
+          <div class="c-bar-snack is-danger">
+            <span class="material-symbols-outlined">error</span>
+            エラーが発生しました。
+          </div>
+
+        </section>
+
+
+      </div>
+    </div>
+    
+  </div>
+</body>
+
+<!-- ファイルアップロードエリアをクリックしたら選択ダイアログを表示する -->
+<script>
+  document.getElementById('uploadArea').addEventListener('click', function () {
+    document.getElementById('fileInput').click();
+  });
+</script>

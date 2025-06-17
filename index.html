@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYSTEM-UI</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  
+  <!-- Google material icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="l-container">
+
+    <div class="l-sidenavi">
+      <button class="l-sidenavi__button">
+        <span class="material-symbols-outlined">keyboard_double_arrow_left</span>
+        <!-- メニューを閉じているときのアイコンは <span class="material-symbols-outlined">keyboard_double_arrow_right</span> -->
+      </button>
+      <h1 class="l-sidenavi__company">SYSTEM-UI</h1>
+      <div class="l-sidenavi__menu">
+        <ul class="l-sidenavi__menu-list">
+          <li class="l-sidenavi__menu-item is-current">
+            <a href="/index.html" class="l-sidenavi__menu-link">
+              <span class="material-symbols-outlined">grid_view</span>メインメニュー</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/smart-meter.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">speed</span>機器</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/kenshin.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">list_alt</span>一覧</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/alarm.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">notifications</span>お知らせ</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">tenancy</span>API連携</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/user.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">face</span>ユーザー管理</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/swan.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">sync_alt</span>連携</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/statistical-data.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">equalizer</span>統計データ</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <p class="l-sidenavi__menu-text"><span class="material-symbols-outlined">devices</span>デバイス管理</p>
+            <ul class="l-sidenavi__menu-sub">
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/create.html" class="l-sidenavi__menu-sub-link">デバイス登録</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/delete.html" class="l-sidenavi__menu-sub-link">デバイス削除</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/link.html" class="l-sidenavi__menu-sub-link">デバイス紐付け</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/devices/exchange.html" class="l-sidenavi__menu-sub-link">デバイス交換</a>
+              </li>
+            </ul>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/setting.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">settings</span>設定</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/logout.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">logout</span>ログアウト</a>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <p class="l-sidenavi__menu-text"><span class="material-symbols-outlined">login</span>認証</p>
+            <ul class="l-sidenavi__menu-sub">
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/auth/login.html" class="l-sidenavi__menu-sub-link">ログイン</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/auth/login-error.html" class="l-sidenavi__menu-sub-link">ログインエラー</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/auth/reset-password.html" class="l-sidenavi__menu-sub-link">パスワード再設定</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/auth/change-password.html" class="l-sidenavi__menu-sub-link">パスワード変更</a>
+              </li>
+            </ul>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <p class="l-sidenavi__menu-text"><span class="material-symbols-outlined">error</span>エラー</p>
+            <ul class="l-sidenavi__menu-sub">
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/404.html" class="l-sidenavi__menu-sub-link">404</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/permission-error.html" class="l-sidenavi__menu-sub-link">アクセス権限エラー</a>
+              </li>
+              <li class="l-sidenavi__menu-sub-item">
+                <a href="/system-error.html" class="l-sidenavi__menu-sub-link">システムエラー</a>
+              </li>
+            </ul>
+          </li>
+          <li class="l-sidenavi__menu-item">
+            <a href="/parts.html" class="l-sidenavi__menu-link"><span class="material-symbols-outlined">smart_toy</span>パーツ集</a>
+          </li>
+        </ul>
+      </div>
+      <div class="l-sidenavi__user-info">
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">ユーザー名</dt>
+          <dd class="l-sidenavi__user-info-description">admin-user001</dd>
+        </dl>
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">利用権限</dt>
+          <dd class="l-sidenavi__user-info-description">管理者</dd>
+        </dl>
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">事業者</dt>
+          <dd class="l-sidenavi__user-info-description">SYSTEM-UI<span>様</span></dd>
+        </dl>
+        <dl class="l-sidenavi__user-info-list">
+          <dt class="l-sidenavi__user-info-term">ログイン日時</dt>
+          <dd class="l-sidenavi__user-info-description">YYYY/MM/DD HH:SS</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="l-main">
+      <header class="l-header">メインメニュー</header>
+
+      <div class="l-main__content">
+
+        <ul class="l-main__menu-list">
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">speed</span></div>
+              <h3 class="l-main__menu-title">機器</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">list_alt</span></div>
+              <h3 class="l-main__menu-title">一覧</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">notifications</span></div>
+              <h3 class="l-main__menu-title">お知らせ</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">tenancy</span></div>
+              <h3 class="l-main__menu-title">API連携</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">face</span></div>
+              <h3 class="l-main__menu-title">ユーザー管理</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">sync_alt</span></div>
+              <h3 class="l-main__menu-title">連携</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">equalizer</span></div>
+              <h3 class="l-main__menu-title">統計データ</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">devices</span></div>
+              <h3 class="l-main__menu-title">デバイス管理</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+          <li class="l-main__menu-item">
+            <a href="" class="l-main__menu-link">
+              <div class="l-main__menu-icon"><span class="material-symbols-outlined">settings</span></div>
+              <h3 class="l-main__menu-title">設定</h3>
+              <p class="l-main__menu-description">サンプルテキストが<br>入ります</p>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="c-tile">
+          <li class="c-tile__item">
+            <div class="c-tile__item-index">
+              <div class="c-tile__item-icon"><span class="material-symbols-outlined">devices</span></div>
+              <h3 class="c-tile__item-title">デバイス管理</h3>
+            </div>
+            <div class="c-tile__item-list">
+              <a href="/devices/create.html" class="c-tile__item-link">デバイスの登録<span class="material-symbols-outlined">chevron_right</span></a>
+              <a href="/devices/delete.html" class="c-tile__item-link">デバイスの削除<span class="material-symbols-outlined">chevron_right</span></a>
+              <a href="/devices/link.html" class="c-tile__item-link">デバイスの紐付け<span class="material-symbols-outlined">chevron_right</span></a>
+              <a href="/devices/exchange.html" class="c-tile__item-link">デバイスの交換<span class="material-symbols-outlined">chevron_right</span></a>
+            </div>
+          </li>
+          <li class="c-tile__item">
+            <div class="c-tile__item-index">
+              <div class="c-tile__item-icon"><span class="material-symbols-outlined">equalizer</span></div>
+              <h3 class="c-tile__item-title">統計データ</h3>
+            </div>
+            <div class="c-tile__item-list">
+              <a href="/statistical-data.html" class="c-tile__item-link">統計データ出力<span class="material-symbols-outlined">chevron_right</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+    
+</body>
+</html>

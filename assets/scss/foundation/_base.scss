@@ -1,0 +1,6 @@
+@use "../global/variables" as *;
+
+body {
+  font-family: $font-main;
+  color: $text01;
+}

@@ -1,0 +1,233 @@
+@use "../global/variables" as *;
+
+/*
+  フォーム
+------------------------------------- */
+
+.c- {
+  &form {
+
+    &__wrap {
+      display: grid;
+      gap: 0 48px;
+      grid-auto-flow: column;
+      align-items: end;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__group {
+      display: grid;
+      gap: 0 8px;
+      grid-auto-flow: column;
+      align-items: end;
+      justify-content: start;
+    }
+
+    &__label {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 auto 8px;
+      letter-spacing: .02em;
+      display: block;
+      width: 100%;
+      text-align: left;
+      &-required {
+        color: $alert;
+        font-size: 15px;
+        font-weight: 500;
+        margin: 0 0 0 32px;
+        letter-spacing: .02em;
+      }
+    }
+
+    &__inputs {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 0 12px;
+      align-items: center;
+      justify-content: start;
+      margin: 0 24px 0 0;
+    }
+
+    &__text {
+      max-width: 424px;
+      width: 424px;
+      height: 38px;
+      border: 1px solid $border01;
+      border-radius: 4px;
+      padding: 10px 20px;
+    }
+
+    &__date {
+      width: 246px;
+      height: 38px;
+      border: 1px solid $border01;
+      border-radius: 4px;
+      padding: 0 16px;
+      cursor: pointer;
+    }
+
+    &__select {
+      width: 424px;
+      height: 38px;
+      border: 1px solid $border01;
+      border-radius: 4px;
+      padding: 0 16px;
+      cursor: pointer;
+    }
+
+    &__radio {
+      font-size: 16px;
+      position: relative;
+      width: 22px;
+      height: 22px;
+      margin: 0 8px -2px 0;
+      border: 1px solid $border01;
+      border-radius: 50%;
+      vertical-align: -2px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      &:checked {
+        border: 1px solid $primary;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: $primary;
+        }
+      }
+      &-label {
+        margin: 0 24px 0 0;
+        cursor: pointer;
+      }
+    }
+
+    &__upload {
+      width: 100%;
+      height: 220px;
+      border: 2px dashed $border01;
+      background-color: $bg-lighter;
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      cursor: pointer;
+      margin: 0 auto 24px;
+      transition: .3s;
+      &:hover {
+        background-color: $bg-light;
+      }
+      &-text {
+        font-size: 18px;
+        color: $border01;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 auto 24px;
+        width: 100%;
+      }
+      &-input {
+        display: none;
+        width: 100%;
+        height: 220px;
+      }
+      span {
+        font-size: 41px;
+        color: $text01;
+      }
+      // 削除する時のアップロードエリア
+      &--delete {
+        @extend .c-form__upload;
+        border: 2px dashed $alert;
+        background-color: rgba($alert, .05);
+        transition: .3s;
+        &:hover {
+          background-color: rgba($alert, .1);
+        }
+        .c-form__upload-text {
+          color: $alert;
+        }
+        span {
+          color: $alert;
+        }
+      }
+      // アップロード失敗時のエラーメッセージ
+      &-error {
+        color: $alert;
+        font-size: 16px;
+        margin: 0 auto 48px;
+        p {
+          &:not(:last-child) {
+            margin: 0 auto 8px;
+          }
+        }
+      }
+    }
+
+    &__auth {
+      margin: 0 auto 40px;
+      &.is-error {
+        .c-form__auth-input {
+          border: 2px solid $alert;
+        }
+      }
+      &-wrap {
+        position: relative;
+      }
+      &-input {
+        max-width: 484px;
+        width: 484px;
+        height: 48px;
+        border: 1px solid $border01;
+        border-radius: 4px;
+        padding: 10px 20px;
+      }
+      &-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+          opacity: .7;
+        }
+      }
+
+      &-notice {
+        font-size: 14px;
+        color: $text01;
+        margin: 8px auto 0;
+      }
+      &-message {
+        font-size: 13px;
+        color: $alert;
+        letter-spacing: .02em;
+        margin: 8px auto 0;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0 4px;
+        align-items: center;
+        justify-content: start;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__notice {
+      &01 {
+        font-size: 16px;
+        margin: 0 0 16px;
+        text-align: left;
+      }
+    }
+  }
+}

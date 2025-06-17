@@ -1,0 +1,70 @@
+@use "../global/variables" as *;
+
+/*
+  タイル
+------------------------------------- */
+
+.c- {
+  &tile {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 56px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    &__item {
+      width: 400px;
+      height: 200px;
+      background-color: $white02;
+      border-radius: 10px;
+      border: 2px solid $primary;
+      padding: 16px 32px;
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      justify-content: start;
+      grid-template-columns: auto 1fr;
+      gap: 0 32px;
+      &-icon {
+        text-align: center;
+        margin: 0 auto 8px;
+        height: 54px;
+        span {
+          font-size: 65px;
+          color: $primary;
+        }
+      }
+      &-title {
+        font-size: 18px;
+        color: $text01;
+        letter-spacing: .03em;
+        font-weight: 500;
+      }
+      &-list {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 24px 0;
+      }
+      &-link {
+        color: $text02;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: .03em;
+        line-height: 1.1;
+        transition: .3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover {
+          color: $primary;
+          font-weight: 500;
+        }
+        span {
+          font-size: 18px;
+          color: $primary;
+        }
+      }
+    }
+  }
+}

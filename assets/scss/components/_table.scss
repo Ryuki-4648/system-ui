@@ -1,0 +1,195 @@
+@use "../global/variables" as *;
+
+/*
+  テーブル
+------------------------------------- */
+
+.c- {
+  &table {
+    &01 {
+
+      &__count {
+        margin: 0 auto 16px;
+        font-size: 16px;
+        text-align: right;
+      }
+
+      &__wrap {
+        height: 380px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 16px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: $border04;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $border03;
+          cursor: pointer;
+        }
+      }
+
+      &__table {
+        border-radius: 12px;
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 0 1px 2px 0 rgba(#DCE1E8, .5);
+        
+        tr {
+          width: 100%;
+          border-bottom: 2px solid $border04;
+          padding: 0 16px;
+          th {
+            background-color: $bg-light;
+            padding: 16px 24px;
+            font-weight: 500;
+            text-align: left;
+            position: sticky;
+            top: 0;
+            &:first-child {
+              border-radius: 12px 0 0 0;
+            }
+            &:last-child {
+              border-radius: 0 12px 0 0;
+            }
+          }
+          td {
+            padding: 16px 24px;
+            text-align: left;
+            font-weight: 400;
+            font-size: 15px;
+          }
+        }
+        tbody {
+          &::-webkit-scrollbar {
+            width: 8px;
+          }
+          &::-webkit-scrollbar-thumb {
+          }
+        }
+      }
+    }
+
+    &02 {
+      overflow-x: scroll;
+      width: 100%;
+      &::-webkit-scrollbar {
+        width: 16px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $border04;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $border03;
+        cursor: pointer;
+      }
+      &__table {
+        border-radius: 12px;
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 0 1px 2px 0 rgba(#DCE1E8, .5);
+        tr {
+          &:first-child {
+            th {
+              background-color: $bg-light;
+              padding: 16px;
+              font-weight: 500;
+              text-align: left;
+              &:first-child {
+                border-radius: 12px 0 0 0;
+              }
+              &:last-child {
+                border-radius: 0 12px 0 0;
+              }
+            }
+          }
+          &:not(:first-child) {
+            th {
+              font-size: 15px;
+              font-weight: 400;
+              text-align: left;
+              padding: 16px;
+              line-height: 1.5;
+              border-right: 2px solid $bg-light;
+              border-bottom: 2px solid $bg-light;
+            }
+          }
+          &:nth-last-child(2) {
+            th {
+              border-radius: 0 0 0 12px;
+              border-bottom: none;
+              font-weight: 500;
+            }
+          }
+          &:not(:last-of-type) {
+            td {
+              border-bottom: 2px solid $bg-light;
+            }
+          }
+        }
+        th {
+          width: 200px;
+          white-space: nowrap;
+        }
+        td {
+          padding: 8px 16px;
+          font-size: 15px;
+          &:first-of-type {
+            border-right: 4px solid $bg-light;
+          }
+          &:not(:last-child) {
+            border-right: 2px solid $bg-light;
+          }
+        }
+      }
+
+      &__row {
+        &--border {
+          border-top: 4px solid $bg-light;
+        }
+        &--weight {
+          th, td {
+            font-weight: 500!important;
+          }
+        }
+      }
+    }
+
+    // 対象のデバイス
+    &03 {
+      width: 100%;
+      margin: 0 auto 56px;
+      tr {
+        border-bottom: 1px solid $border02;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      th {
+        text-align: left;
+        font-size: 17px;
+        font-weight: 500;
+        padding: 8px;
+        width: calc(100% - 184px);
+        &:first-child {
+          width: 64px;
+        }
+        &:last-child {
+          width: 120px;
+        }
+      }
+      td {
+        font-size: 16px;
+        text-align: left;
+        padding: 8px;
+        width: calc(100% - 184px);
+        &:first-child {
+          width: 64px;
+        }
+        &:last-child {
+          width: 120px;
+        }
+      }
+    }
+  }
+}
