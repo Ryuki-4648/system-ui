@@ -16,7 +16,9 @@
 
       &__wrap {
         height: 380px;
+        border-radius: 12px;
         overflow-y: auto;
+        box-shadow: 0 1px 2px 0 rgba(#DCE1E8, .5);
         &::-webkit-scrollbar {
           width: 16px;
         }
@@ -30,10 +32,8 @@
       }
 
       &__table {
-        border-radius: 12px;
         border-collapse: collapse;
         width: 100%;
-        box-shadow: 0 1px 2px 0 rgba(#DCE1E8, .5);
         
         tr {
           width: 100%;
@@ -46,6 +46,7 @@
             text-align: left;
             position: sticky;
             top: 0;
+            min-width: 150px;
             &:first-child {
               border-radius: 12px 0 0 0;
             }
@@ -72,6 +73,7 @@
 
     &02 {
       overflow-x: scroll;
+      box-shadow: 0 1px 2px 0 rgba(#DCE1E8, .5);
       width: 100%;
       &::-webkit-scrollbar {
         width: 16px;
@@ -87,7 +89,6 @@
         border-radius: 12px;
         border-collapse: collapse;
         width: 100%;
-        box-shadow: 0 1px 2px 0 rgba(#DCE1E8, .5);
         tr {
           &:first-child {
             th {
@@ -183,6 +184,8 @@
         text-align: left;
         padding: 8px;
         width: calc(100% - 184px);
+        display: flex;
+        align-items: center;
         &:first-child {
           width: 64px;
         }

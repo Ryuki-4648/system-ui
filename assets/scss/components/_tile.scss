@@ -7,11 +7,10 @@
 .c- {
   &tile {
     display: grid;
-    grid-auto-flow: column;
     gap: 56px;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    grid-template-columns: repeat(2, 400px);
     &__item {
       width: 400px;
       height: 200px;
@@ -63,6 +62,27 @@
         span {
           font-size: 18px;
           color: $primary;
+        }
+      }
+      &--disabled {
+        @extend .c-tile__item;
+        background-color: $bg-light;
+        border: none;
+        .c-tile__item {
+          &-icon {
+            span {
+              color: $border02;
+            }
+          }
+          &-title, &-link {
+            color: $text02;
+            span {
+              color: $text02;
+            }
+          }
+          &-link {
+            pointer-events: none;
+          }
         }
       }
     }

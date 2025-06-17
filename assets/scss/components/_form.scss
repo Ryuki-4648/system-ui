@@ -57,6 +57,12 @@
       border: 1px solid $border01;
       border-radius: 4px;
       padding: 10px 20px;
+      @media (max-width: 1400px) {
+        width: 300px;
+      }
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
     }
 
     &__date {
@@ -66,6 +72,12 @@
       border-radius: 4px;
       padding: 0 16px;
       cursor: pointer;
+      @media (max-width: 1400px) {
+        width: 150px;
+      }
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
     }
 
     &__select {
@@ -75,6 +87,41 @@
       border-radius: 4px;
       padding: 0 16px;
       cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      @media (max-width: 1400px) {
+        width: 300px;
+      }
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+      &::-ms-expand {
+        display: none; // IE対応
+      }
+      &-wrap {
+        position: relative;
+        width: 424px;
+        @media (max-width: 1400px) {
+          width: 300px;
+        }
+        @media (max-width: 1200px) {
+          width: 100%;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 14px;
+          right: 16px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-right: 6px solid transparent;
+          border-left: 6px solid transparent;
+          border-top: 12px solid $primary;
+          border-bottom: 0;
+          pointer-events: none;
+        }
+      }
     }
 
     &__radio {
@@ -163,6 +210,19 @@
         color: $alert;
         font-size: 16px;
         margin: 0 auto 48px;
+        &-list {
+          display: flex;
+          line-height: 1.5;
+          margin: 0 auto 8px;
+          dt {
+            margin: 0 24px 0 0;
+            width: 400px;
+          }
+          dd {
+            width: calc(100% - 400px);
+            font-size: 15px;
+          }
+        }
         p {
           &:not(:last-child) {
             margin: 0 auto 8px;

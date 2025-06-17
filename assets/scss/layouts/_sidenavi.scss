@@ -56,9 +56,6 @@
           margin: 0;
         }
       }
-      &-list {
-
-      }
       &-item {
         width: 100%;
         &.is-current {
@@ -67,11 +64,22 @@
             color: $primary;
           }
         }
+        // 無効のメニュー
+        &--disabled {
+          @extend .l-sidenavi__menu-item;
+          .l-sidenavi__menu-link {
+            color: $border02;
+            cursor: unset;
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
       }
       &-link {
         font-size: 16px;
         font-weight: 500;
-        padding: 12px 16px 12px 16px;
+        padding: 12px 16px;
         display: flex;
         color: $text01;
         transition: .3s;
@@ -79,7 +87,7 @@
           background-color: #F0F0F0;
         }
         span {
-          margin: 0 10px 0 0;
+          margin: 0 8px 0 0;
         }
       }
       &-text {

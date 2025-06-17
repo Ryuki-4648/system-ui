@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>確認モーダル | デバイス管理 | SYSTEM-UI</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  
+  <!-- Google material icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="assets/main.js"></script>
+</head>
+
+<body>
+  <div class="l-container">
+    
+    <div id="sidenavi"></div>
+
+    <div class="l-main">
+      <header class="l-header">デバイス管理<span class="l-header__sub">確認モーダル</span></header>
+
+      <div class="l-main__content">
+
+      </div>
+    </div>
+    
+    <div class="l-container__overlay">
+      <div class="c-modal">
+        <button class="c-modal__close"><span class="material-symbols-outlined">close</span></button>
+        <p class="c-modal__text">対象のデバイスを削除しますか？</p>
+        <!-- <p class="c-modal__text">対象のデバイスを登録しますか？</p> -->
+        <dl class="c-modal__list">
+          <dt class="c-modal__list-term">キャリア：</dt>
+          <dd class="c-modal__list-description">KEYAKI SYSTEMS</dd>
+        </dl>
+        <dl class="c-modal__list">
+          <dt class="c-modal__list-term">通信機器メーカー：</dt>
+          <dd class="c-modal__list-description">アズビル</dd>
+        </dl>
+        <dl class="c-modal__list">
+          <dt class="c-modal__list-term">エリア：</dt>
+          <dd class="c-modal__list-description">さくら坂</dd>
+        </dl>
+
+        <div class="c-modal__button">
+          <button class="c-button__danger">削除</button>
+          <!-- <button class="c-button__primary">登録</button> -->
+          <button class="c-button__neutral">閉じる</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
